@@ -4,7 +4,7 @@ import { MainComponent } from './../main/main.component';
 import { EditComponent } from './edit/edit.component';
 import { ListComponent } from './list/list.component';
 import { NewComponent } from './new/new.component';
-
+import { SharedModule } from '../shared/shared.module'
 
 
 
@@ -16,12 +16,15 @@ const routes: Routes = [
       {path:'edit', component:EditComponent},
       {path:'list', component:ListComponent},
       {path:'new', component:NewComponent},
+      
       {path:'**', redirectTo: 'login'}
-  ]}
+  ,
+ ]},
+  
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AdminRoutingModule { }
+export class CompanyRoutingModule { }
