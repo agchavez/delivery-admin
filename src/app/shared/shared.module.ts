@@ -9,12 +9,14 @@ import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesom
 import { far  } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     FooterComponent,
-    NavBarComponent
+    NavBarComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
   ],
   exports: [
     FooterComponent,
-    NavBarComponent
+    NavBarComponent,
+    DashboardComponent
   ]
 })
 export class SharedModule {

@@ -8,12 +8,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { SharedModule } from './shared/shared.module';
 import { MainComponent } from './main/main.component';
+import { ListComponent} from './../app/admin/list/list.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    ListComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -21,6 +24,7 @@ import { MainComponent } from './main/main.component';
     SharedModule,
     HttpClientModule,
     FontAwesomeModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
