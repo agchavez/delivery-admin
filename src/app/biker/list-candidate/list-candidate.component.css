@@ -75,6 +75,11 @@
     cursor: pointer;
 }
 
+.newUser:hover {
+    background-color: #DB6D0B;
+    color: white;
+}
+
 .search {
     border-radius: 7px 0px 0px 7px;
     border: 1px solid #8080805e;
