@@ -10,13 +10,15 @@ import { far  } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DashboardUserComponent } from './components/dashboard-user/dashboard-user.component';
 
 
 @NgModule({
   declarations: [
     FooterComponent,
     NavBarComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardUserComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   exports: [
     FooterComponent,
     NavBarComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardUserComponent
   ]
 })
 export class SharedModule {

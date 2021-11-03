@@ -1,0 +1,97 @@
+.name {
+    color: #DB6D0B
+}
+
+.table {
+    margin: 2rem 5rem!important;
+    width: 90%;
+}
+
+.vermas {
+    display: flex;
+    width: 20%;
+    padding-left: 50px;
+    justify-content: space-around;
+    padding-top: 5rem;
+}
+
+.btnList {
+    background-color: white;
+    border: 0;
+}
+
+.buttonSpace {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnList {
+    background-color: transparent;
+    border: 0
+}
+
+.divOption {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+}
+
+.mas {
+    background-color: transparent;
+    color: gray;
+    border: none;
+    padding: 2px 10px;
+}
+
+.btnEdit {
+    background-color: #2E8C4E;
+    color: white;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 2px 10px;
+}
+
+.container {
+    margin-left: 5rem!important;
+}
+
+.option {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.newUser {
+    background-color: transparent;
+    border: 1px solid #DB6D0B;
+    color: #DB6D0B;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 7px;
+    padding-top: 0;
+    padding-bottom: 0.3rem;
+    width: 20rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.search {
+    border-radius: 7px 0px 0px 7px;
+    border: 1px solid #8080805e;
+    width: 80%;
+    border-right: transparent;
+    background-color: #8080800a;
+}
+
+.inputS {
+    width: 90%;
+    border: 0;
+    margin: 1px;
+}
+
+.spanSearch {
+    border-radius: 0px 7px 7px 0px!important;
+    background: transparent;
+    border-left: 0;
+    background-color: #8080800a
+}

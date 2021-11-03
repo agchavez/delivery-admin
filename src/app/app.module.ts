@@ -8,14 +8,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { SharedModule } from './shared/shared.module';
 import { MainComponent } from './main/main.component';
-import { ListComponent} from './../app/admin/list/list.component'
+import { ListComponent} from './../app/admin/list/list.component';
+import { ListCandidateComponent} from './../app/biker/list-candidate/list-candidate.component';
+import { ListComponentB} from './../app/biker/list/list.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ListComponent
+    ListComponent,
+    ListComponentB,
+    ListCandidateComponent
     
   ],
   imports: [
