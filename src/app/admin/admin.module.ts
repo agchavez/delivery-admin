@@ -18,13 +18,15 @@ import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesom
 @NgModule({
   declarations: [
     NewComponent,
-    EditComponent
+    EditComponent,
+    ListComponent
     
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ],
 })
 export class AdminModule {
