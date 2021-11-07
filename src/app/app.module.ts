@@ -17,10 +17,7 @@ import { ListComponentB} from './../app/biker/list/list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    ListComponent,
-    ListComponentB,
-    ListCandidateComponent
+    MainComponent
     
   ],
   imports: [
