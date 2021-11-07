@@ -14,7 +14,8 @@ import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesom
 
 @NgModule({
   declarations: [
-    
+    ListComponentB,
+    ListCandidateComponent
   ],
   imports: [
     BikerRoutingModule,
