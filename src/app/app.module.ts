@@ -14,6 +14,7 @@ import { MainComponent } from './main/main.component';
   declarations: [
     AppComponent,
     MainComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -21,6 +22,7 @@ import { MainComponent } from './main/main.component';
     SharedModule,
     HttpClientModule,
     FontAwesomeModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

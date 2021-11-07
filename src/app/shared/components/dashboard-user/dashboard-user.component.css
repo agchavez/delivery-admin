@@ -21,6 +21,11 @@
     justify-content: space-between;
 }
 
+.btnList {
+    background-color: transparent;
+    border: 0
+}
+
 .divOption {
     display: flex;
     width: 20%;
@@ -28,10 +33,9 @@
 }
 
 .btnDelete {
-    background-color: #DE5555;
-    color: white;
-    border: 1px solid;
-    border-radius: 6px;
+    background-color: transparent;
+    color: #DE5555;
+    border: none;
     padding: 2px 10px;
 }
 
