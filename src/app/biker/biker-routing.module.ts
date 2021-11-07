@@ -16,7 +16,7 @@ const routes: Routes = [
       {path:'list', component:ListComponentB},
       {path:'list-candidate', component:ListCandidateComponent},
       {path:'solicited', component:SolicitedComponent},
-      {path:'**', redirectTo: 'login'}
+      {path:'**', redirectTo: 'list'}
   ]}
 ];
 
