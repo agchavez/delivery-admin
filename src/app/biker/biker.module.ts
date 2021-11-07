@@ -10,16 +10,21 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { CommonModule } from '@angular/common';
 
 import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import { ListComponent } from '../admin/list/list.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [
+    ListComponentB,
+    ListCandidateComponent
     
   ],
   imports: [
     BikerRoutingModule,
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ],
 })
 export class BikerModule {

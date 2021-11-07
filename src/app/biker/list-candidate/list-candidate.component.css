@@ -57,7 +57,7 @@
 
 .option {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 5rem;
 }
 
@@ -73,6 +73,7 @@
     width: 20rem;
     font-size: 18px;
     cursor: pointer;
+    margin-left: 80px;
 }
 
 .newUser:hover {
