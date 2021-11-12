@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  show:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    window.scroll(0,0)
+  }
+
+  showPass(){
+    this.show = !this.show;
   }
 
 }
