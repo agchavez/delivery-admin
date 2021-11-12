@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 
 import { CompanyRoutingModule } from './company-routing.module';
 import { SharedModule } from './../shared/shared.module';
+import { DetailCompanyComponent } from './detail-company/detail-company.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -9,10 +11,14 @@ import { SharedModule } from './../shared/shared.module';
   declarations: [
     
     
+  
+    DetailCompanyComponent
   ],
   imports: [
     CompanyRoutingModule,
-    SharedModule
+    SharedModule,
+    
+    FontAwesomeModule,
   ],
   bootstrap: []
 })
