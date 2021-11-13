@@ -111,6 +111,12 @@
     border-color: #DB6D0B;
 }
 
+.entrar:hover {
+    color: white;
+    background-color: #DB6D0B;
+    cursor: pointer;
+}
+
 #labelClave {
     font-size: 20px;
 }
