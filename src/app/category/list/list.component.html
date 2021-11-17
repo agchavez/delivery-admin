@@ -1,1 +1,54 @@
-<p>list works!</p>
+<div class="container-fluid" id="containerP">
+
+    <h3 id="product">Categorias Existentes</h3>
+</div>
+
+<div id="cont2" class="option">
+    <button type="button" mat-raised-button class="btn-outline-light newUser" [routerLink]="">
+    <fa-icon [icon]="['fas', 'plus']" style="padding-right: 71px;"></fa-icon>
+    
+    Agregar Categoria</button>
+
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-3 col-sm-12">
+            <div class="card">
+                <div>
+                    <h6>Comida</h6>
+                    <p>Descripcion</p>
+                </div>
+                <div class="buttons">
+                    <button class="btnDelete">
+                        <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
+        
+                        </button>
+                    <button class="btnEdit">
+                        <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
+        
+                        </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-12">
+            <div class="card">
+                <div>
+                    <h6>Bebida</h6>
+                    <p>Descripcion</p>
+                </div>
+                <div class="buttons">
+                    <button class="btnDelete">
+                        <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
+        
+                        </button>
+                    <button class="btnEdit">
+                        <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
+        
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

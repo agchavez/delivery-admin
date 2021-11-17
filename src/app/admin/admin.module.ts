@@ -11,6 +11,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { CommonModule } from '@angular/common';
 
 import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -21,6 +22,7 @@ import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesom
     EditComponent,
     ListComponent
     
+    
   ],
   imports: [
     CommonModule,
@@ -28,6 +30,8 @@ import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesom
     FontAwesomeModule,
     SharedModule
   ],
+  exports: [
+  ]
 })
 export class AdminModule {
   constructor(library: FaIconLibrary){

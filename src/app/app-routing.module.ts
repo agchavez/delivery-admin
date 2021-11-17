@@ -20,12 +20,13 @@ const routes: Routes = [
   },
   {
     path:'clients',
-    loadChildren: ()=>import('./clients/clients-module').then(m=>m.ClientsModule),
+    loadChildren: ()=>import('./clients/client-module').then(m=>m.ClientModule),
   },
   {
     path:'company',
     loadChildren: ()=>import('./company/company.module').then(m=>m.CompanyModule),
   },
+  
   {
     path:'products',
     loadChildren: ()=>import('./products/product.module').then(m=>m.ProductModule),
