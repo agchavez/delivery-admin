@@ -11,6 +11,10 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DashboardUserComponent } from './components/dashboard-user/dashboard-user.component';
+import { FormsModule,  } from '@angular/forms';
+import { MaterialModule } from '../material/material.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 @NgModule({
@@ -18,12 +22,15 @@ import { DashboardUserComponent } from './components/dashboard-user/dashboard-us
     FooterComponent,
     NavBarComponent,
     DashboardComponent,
-    DashboardUserComponent
+    DashboardUserComponent,
+    AlertComponent
   ],
   imports: [
-    CommonModule,
     SharedRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    CommonModule,
+    MaterialModule,
   ],
   exports: [
     FooterComponent,

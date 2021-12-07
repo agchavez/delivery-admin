@@ -14,29 +14,11 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xl-3 col-sm-12">
+        <div class="col-xl-3 col-sm-12 mb-3" *ngFor="let category of categories">
             <div class="card">
                 <div>
-                    <h6>Comida</h6>
-                    <p>Descripcion</p>
-                </div>
-                <div class="buttons">
-                    <button class="btnDelete">
-                        <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
-        
-                        </button>
-                    <button class="btnEdit">
-                        <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
-        
-                        </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-12">
-            <div class="card">
-                <div>
-                    <h6>Bebida</h6>
-                    <p>Descripcion</p>
+                    <h4>{{category.name}}</h4>
+
                 </div>
                 <div class="buttons">
                     <button class="btnDelete">

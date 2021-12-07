@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h3 class="name" style="padding: 25px;">Empresas</h3>
     <div class="option">
-        <button type="button" mat-raised-button class="btn-outline-light newUser" [routerLink]="'/admin/new'">
+        <button type="button" mat-raised-button class="btn-outline-light newUser" [routerLink]="'/company/new'">
             <fa-icon [icon]="['fas', 'plus']" style="padding-right: 20px;"></fa-icon>
             
             Nueva empresa</button>
@@ -38,11 +38,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>ADM</td>
+            <tr *ngFor="let company of companies;let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{company.name}}</td>
                 <td class="buttonSpace">
-                    <div>938492384</div>
+                    <div>{{company.phone}}</div>
                     <div class="divOption">
                         <button class="btnDelete">
                     <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
@@ -54,7 +54,7 @@
                     </button>
 
                     </div>
-                    <button class="ir" routerLink="/company/detail">>
+                    <button class="ir" routerLink="/company/detail/{{company._id}}">>
          
                     </button>
                 </td>
@@ -62,60 +62,21 @@
 
 
             </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>ADM</td>
-                <td class="buttonSpace">
-                    <div>938492384</div>
-                    <div class="divOption">
-                        <button class="btnDelete">
-                    <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
-    
-                    </button>
-                        <button class="btnEdit">
-                    <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
-    
-                    </button>
 
-                    </div>
-                    <button class="ir" routerLink="/company/detail">>
-         
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>ADM</td>
-                <td class="buttonSpace">
-                    <div>938492384</div>
-                    <div class="divOption">
-                        <button class="btnDelete">
-                    <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
-    
-                    </button>
-                        <button class="btnEdit">
-                    <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
-    
-                    </button>
 
-                    </div>
-                    <button class="ir" routerLink="/company/detail">>
-         
-                    </button>
-                </td>
-            </tr>
         </tbody>
+        <button class="btnList" style="cursor: pointer;" (click)="getCompanies(limit,limit+4)">siguiente...</button>
     </table>
 
 
 
-    <div class="vermas">
+    <!-- <div class="vermas">
         <div>Ver más...</div>
         <button class="btnList">1</button>
         <button class="btnList">2</button>
         <button class="btnList">3</button>
 
 
-    </div>
+    </div> -->
 
 </div>
