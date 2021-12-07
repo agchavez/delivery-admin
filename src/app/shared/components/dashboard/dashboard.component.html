@@ -16,55 +16,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>8787jhjh</td>
-            <td>Otto</td>
-            <td>9834784359</td>
+        <tr *ngFor="let admin of admins;let i=index">
+            <th scope="row">{{i}}</th>
+            <td>{{admin._id}}</td>
+            <td>{{admin.firstName}} {{admin.lastName}}</td>
+            <td>{{admin.phone}}</td>
             <td class="buttonSpace">
-                <div>oferrera@gmail.com</div>
-                <div class="divOption">
-                    <button class="btnDelete">
-                <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
-
-                </button>
-                    <button class="btnEdit">
-                <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
-
-                </button>
-                </div>
-            </td>
-
-
-
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>878jhjj</td>
-            <td>Thornton</td>
-            <td>9834784359</td>
-            <td class="buttonSpace">
-                <div>oferrera@gmail.com</div>
-                <div class="divOption">
-                    <button class="btnDelete">
-                <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
-
-                </button>
-                    <button class="btnEdit">
-                <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
-
-                </button>
-                </div>
-            </td>
-
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>9834784359</td>
-            <td class="buttonSpace">
-                <div>oferrera@gmail.com</div>
+                <div>{{admin.email}}</div>
                 <div class="divOption">
                     <button class="btnDelete">
                 <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>

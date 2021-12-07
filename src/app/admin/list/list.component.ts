@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../../services/admins.service';
 
 @Component({
   selector: 'app-list',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  admins:any={}
 
-  constructor(
+  constructor(private adminService:AdminService
   ) { 
     
   }
@@ -15,4 +17,5 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
