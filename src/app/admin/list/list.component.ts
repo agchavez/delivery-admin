@@ -7,15 +7,15 @@ import { AdminService } from '../../services/admins.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  admins:any={}
-
   constructor(private adminService:AdminService
   ) { 
     
   }
 
   ngOnInit(): void {
+
   }
 
-  
+
+
 }

@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 
 import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../material/material.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -28,7 +30,9 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     AdminRoutingModule,
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
+    MaterialModule,
+    FormsModule
   ],
   exports: [
   ]

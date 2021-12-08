@@ -27,4 +27,11 @@ import { Observable } from 'rxjs/internal/Observable';
         return this.httpClient.get(url,{})
          // console.log(data)
         }
+
+    postAdmin(data:any):Observable<any>{
+      const url = `${this.baseUrl}/admin/register`;
+        return this.httpClient.post(url,data)
+          // console.log(data)
+        }
+    
   }

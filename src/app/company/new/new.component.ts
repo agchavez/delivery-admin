@@ -4,7 +4,7 @@ import { UbicationService } from 'src/app/services/ubication.service';
 import * as mapboxgl  from 'mapbox-gl';
 import { environment } from '../../../environments/environment';
 import { MatDialog } from '@angular/material/dialog';
-import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { faTimesCircle,faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 
 import { AlertType, ColorAlert, NameAlert } from '../../shared/interfaces/alert.interfaces';
 
@@ -98,16 +98,13 @@ export class NewComponent implements OnInit {
         "long":this.latLong.long,
         "description":this.direccion
   
-  }
- 
-
-        //Enviar archivos al servicio
+  }        //Enviar archivos al servicio
         this.companyService.uploadImage(this.imgBanner,this.imgLogo,this.telefono,this.nombreEmpresa,location).subscribe(
           (resp: any)=>{
             if(resp.ok){
               this.alert = {
                 name: NameAlert.success,
-                icon: faTimesCircle,
+                icon: faCheckCircle,
                 msj:"Empresa agregada",
                 color: ColorAlert.success
               }
