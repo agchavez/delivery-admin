@@ -44,7 +44,7 @@
                 <td class="buttonSpace">
                     <div>{{company.phone}}</div>
                     <div class="divOption">
-                        <button class="btnDelete">
+                        <button class="btnDelete" (click)="deleteCompany(company._id)">
                     <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
     
                     </button>
