@@ -38,6 +38,14 @@ const httpOptions = {
          // console.log(data)
         }
 
+    putTakeOrder(idOrder:string,status:string,idBiker:string):Observable<any>{
+      const url = `${this.baseUrl}/order/${idOrder}/admin`
+      const data ={
+        uid:idBiker,
+        status:status
+      }
+      return this.httpClient.put(url,data)
+    }
   
 
   }

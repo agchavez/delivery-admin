@@ -1,24 +1,5 @@
 <div class="container-fluid">
     <h3 class="name" style="padding: 25px;">Ordenes disponibles</h3>
-    <div class="option">
-        <!-- <button type="button" mat-raised-button class="btn-outline-light newUser" [routerLink]="'/company/new'">
-            <fa-icon [icon]="['fas', 'plus']" style="padding-right: 20px;"></fa-icon>
-            
-            Nueva empresa</button> -->
-
-        <!-- <div class="">
-            <div class="input-group" style="width: 25rem; margin-right: 30px;">
-                <input type="text" class="search" aria-describedby="basic-addon1">
-
-                <div class="input-group-prepend">
-                    <span class="input-group-text spanSearch" id="basic-addon1">
-            <fa-icon [icon]="['fas','search']" style="    font-size: 1.2rem;"></fa-icon>
-
-                </span>
-                </div>
-            </div>
-        </div> -->
-    </div>
 
 
     <table class="table">
@@ -52,26 +33,13 @@
 
                 <td class="buttonSpace">
                     <div>{{order.orderDetails.length}}</div>
-                    <!-- <div class="divOption">
-                        <button class="btnDelete">
-                    <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
-    
-                    </button>
-                        <button class="btnEdit">
-                    <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
-    
-                    </button>
 
-                    </div> -->
-                    <!-- <button class="ir" routerLink="/company/detail/{{company._id}}">>
-         
-                    </button> -->
                 </td>
                 <td>
                     <mat-form-field class="selected-basic" appearance="fill">
                         <mat-label>Biker</mat-label>
                         <mat-select [(ngModel)]="bikerID" required name="food" id="muni">
-                            <mat-option *ngFor="let biker of bikers" [value]="biker.firstName">{{biker.firstName}} {{biker.lastName}}</mat-option>
+                            <mat-option *ngFor="let biker of bikers" [value]="biker._id">{{biker.firstName}} {{biker.lastName}}</mat-option>
 
                         </mat-select>
                     </mat-form-field>

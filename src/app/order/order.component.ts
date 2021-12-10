@@ -26,7 +26,6 @@ alert!:AlertType;
 
   takeOrder(idOrder:string){
     console.log(idOrder,this.bikerID)
-
     if(this.bikerID==''){
       this.alert = {
         name: NameAlert.error,
@@ -36,15 +35,31 @@ alert!:AlertType;
       }
       this.openDialog();
     }
-    else{
-    this.alert = {
-      name: NameAlert.success,
-      icon: faCheckCircle,
-      msj:"Orden asignada",
-      color: ColorAlert.success
+
+      else{
+  
+    this.orderService.putTakeOrder(idOrder,'accepted',this.bikerID).subscribe(
+      (resp: any)=>{
+  
+        if(resp.ok){
+          this.alert = {
+            name: NameAlert.success,
+            icon: faCheckCircle,
+            msj:"Orden asignada",
+            color: ColorAlert.success
+          }
+          this.openDialog();
+          this.orders=[]
+          this.getOrder()
+          }
+          
+        }
+      
+    
+    )
     }
-    this.openDialog();
-  }
+
+   
 }
   
   openDialog(){
