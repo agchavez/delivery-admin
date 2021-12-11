@@ -6,6 +6,12 @@ import { DetailCompanyComponent } from './detail-company/detail-company.componen
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from '../material/material.module';
 import { ListComponent } from '../company/list/list.component';
+import { NewComponent } from './new/new.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -13,14 +19,18 @@ import { ListComponent } from '../company/list/list.component';
   declarations: [
   
     DetailCompanyComponent,
-    ListComponent
+    ListComponent,
+    NewComponent
   ],
   imports: [
     CompanyRoutingModule,
     SharedModule,
     
     FontAwesomeModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    CommonModule
+
   ],
   bootstrap: []
 })

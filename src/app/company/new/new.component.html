@@ -1,1 +1,50 @@
-<p>company-new works!</p>
+<div class="container-fluid">
+    <h3 class="name" style="padding: 25px;">Agregar Empresa</h3>
+    <div class="option row">
+
+        <div class="col-6 ">
+            <label for="" class="detalles">Detalles de la empresa</label><br>
+
+            <input id="typeahead-basic" [(ngModel)]="nombreEmpresa" type="text" placeholder="Nombre" name="nombre" class="form-controlD mt-0" />
+            <input id="typeahead-basic" [(ngModel)]="telefono" type="text" placeholder="Teléfono" name="telefono" class="form-controlD mt-4" />
+
+            <div class="divDirection">
+                <mat-form-field class="mt-4" appearance="fill" style="width: 61%;">
+                    <mat-label>Departamento</mat-label>
+                    <mat-select [(ngModel)]="municipallies" id="muni" ngDefaultControl name="muni" (selectionChange)="getMunicipally()">
+                        <mat-option *ngFor="let location of ubications" [value]="[location.municipality,location.departament]">{{location.departament}}</mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="" appearance="fill" style="width: 61%;">
+                    <mat-label>Municipio</mat-label>
+                    <mat-select [(ngModel)]="latLong" name="food" id="municipio" (selectionChange)="check()">
+                        <mat-option class="" [value]="muni" *ngFor='let muni of munic'>{{muni.name}} </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+
+            <textarea id="typeahead-basic2" [(ngModel)]="direccion" type="text-area" placeholder="Dirección" class="" style="width: 61%;"></textarea>
+
+            <button type="button" mat-raised-button class="btn-outline-light newUser" (click)="save()">
+               
+                
+                Agregar</button>
+
+        </div>
+
+
+        <div class="col-6">
+            <label for="" class="detalles mt-2">Agregue su banner</label><br>
+            <input type="file" accept=".img,.jpg" name="banner" (change)="readUrlBanner($event)"><br>
+            <label for="" class="detalles mt-2">Agregue su logo</label><br>
+            <input type="file" accept=".img,.jpg" [(ngModel)]="logo" name="logo" (change)="readUrlLogo($event)"><br>
+
+            <div class="container-map" id="mapa"></div>
+
+        </div>
+
+
+    </div>

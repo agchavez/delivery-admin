@@ -27,6 +27,11 @@
     justify-content: space-around;
 }
 
+.form-controlD {
+    width: 60%;
+    margin-top: 2rem;
+}
+
 .btnDelete {
     background-color: transparent;
     color: red;

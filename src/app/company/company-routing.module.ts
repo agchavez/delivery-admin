@@ -17,7 +17,7 @@ const routes: Routes = [
       {path:'edit', component:EditComponent},
       {path:'list', component:ListComponent},
       {path:'new', component:NewComponent},
-      {path:'detail', component:DetailCompanyComponent},
+      {path:'detail/:id', component:DetailCompanyComponent},
 
       
       {path:'**', redirectTo: 'login'}
