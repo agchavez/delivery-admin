@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <h3 class="name" style="padding: 25px;">Registrando nuevo ususario Administrador</h3>
+    <div class="option row">
+
+        <div class="col-6 ">
+            <img src="../../../assets/img/newUser.png" alt="">
+
+        </div>
+
+
+        <div class="col-6">
+            <input id="typeahead-basic" [(ngModel)]="telefono" type="text" placeholder="Teléfono" name="telefono" class="form-controlD mt-4" />
+            <input id="typeahead-basic" [(ngModel)]="nombre" type="text" placeholder="Nombre" name="nombre" class="form-controlD mt-4" />
+            <input id="typeahead-basic" [(ngModel)]="apellido" type="text" placeholder="Apellido" name="apellido" class="form-controlD mt-4" />
+            <input id="typeahead-basic" [(ngModel)]="email" type="text" placeholder="Emaiil" name="email" class="form-controlD mt-4" />
+            <input id="typeahead-basic" [(ngModel)]="clave" type="password" placeholder="Contraseña" name="apellido" class="form-controlD mt-4" />
+            <button type="button" mat-raised-button class="btn-outline-light newUser" (click)="save()">
+               
+                
+                Agregar</button>
+        </div>
+
+
+    </div>

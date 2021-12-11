@@ -1,0 +1,102 @@
+<div class="container-fluid">
+    <h3 class="name" style="padding: 25px;color:  #DB6D0B;">Registrar nuevo producto</h3>
+    <div class="option row">
+
+        <div class="col-6 ">
+            <label for="" class="detalles">Detalles del producto</label><br>
+
+            <input id="typeahead-basic" [(ngModel)]="name" type="text" placeholder="Nombre" name="nombre" class="form-controlD mt-0" />
+
+            <div class="divDirection">
+                <mat-form-field class="mt-4" appearance="fill" style="width: 61%;">
+                    <mat-label>Categoria</mat-label>
+                    <mat-select id="cate" ngDefaultControl name="cate" [(ngModel)]="category">
+                        <mat-option *ngFor="let category of categories" [value]="category._id">{{category.name}}</mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="" appearance="fill" style="width: 61%;">
+                    <mat-label>Empresa</mat-label>
+                    <mat-select name="food" id="company" [(ngModel)]="company">
+                        <mat-option class="" *ngFor='let company of companies' [value]="company._id">{{company.name}} </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <button type="button" mat-raised-button class="btn-outline-light newUser" (click)="save()">
+               
+                
+            Agregar</button>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="col-6">
+            <input id="typeahead-basic" [(ngModel)]="price" type="text" placeholder="Precio" name="price" class="form-controlD mt-4" /> <br>
+            <input id="typeahead-basic" [(ngModel)]="descrip" type="text" placeholder="Descripción" name="descr" class="form-controlD mt-4" /> <br>
+
+            <label for="" class="detalles mt-2">Agregue imagenes de su producto</label><br>
+            <input type="file" accept=".img,.jpg" [(ngModel)]="imagenes" name="logo" multiple (change)="readUrlImags($event)"><br>
+
+            <label for="" class="detalles mt-2">Agregue sus complementos</label><br>
+
+            <div style="display: flex;">
+                <input id="typeahead-basic" [(ngModel)]="nameCom" type="text" placeholder="Nombre" name="name" class="" /> <br>
+
+                <input id="typeahead-basic" [(ngModel)]="priceCom" type="text" placeholder="Precio" name="price" class="" /> <br>
+                <button class="btnList" style="cursor: pointer;" (click)="agregarComplemento()" [disabled]="nameCom==''||nameCom==undefined||priceCom==''||priceCom==undefined">Agregar</button>
+
+            </div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre
+                            <fa-icon [icon]="['fas', 'angle-down']" style="padding-right: 20px;"></fa-icon>
+
+                        </th>
+                        <th scope="col">Precio
+                            <fa-icon [icon]="['fas', 'angle-down']" style="padding-right: 20px;"></fa-icon>
+
+                        </th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let complement of complements;let i=index">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{complement.name}}</td>
+                        <td class="buttonSpace">
+                            <div>{{complement.price}}</div>
+                            <div class="divOption">
+                                <button class="btnDelete">
+                            <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
+            
+                            </button>
+                                <button class="btnEdit">
+                            <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
+            
+                            </button>
+
+                            </div>
+                        </td>
+
+
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+
+
+    </div>

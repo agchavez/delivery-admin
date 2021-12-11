@@ -1,1 +1,50 @@
-<p>dashboard works!</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id
+                <fa-icon [icon]="['fas', 'angle-down']" style="padding-right: 20px;"></fa-icon>
+
+            </th>
+            <th scope="col">Nombre
+                <fa-icon [icon]="['fas', 'angle-down']" style="padding-right: 20px;"></fa-icon>
+
+            </th>
+            <th scope="col">Contacto</th>
+            <th scope="col">email</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let admin of admins;let i=index">
+            <th scope="row">{{i}}</th>
+            <td>{{admin._id}}</td>
+            <td>{{admin.firstName}} {{admin.lastName}}</td>
+            <td>{{admin.phone}}</td>
+            <td class="buttonSpace">
+                <div>{{admin.email}}</div>
+                <div class="divOption">
+                    <button class="btnDelete">
+                <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
+
+                </button>
+                    <button class="btnEdit">
+                <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
+
+                </button>
+                </div>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="vermas">
+    <div>Ver más...</div>
+    <button class="btnList">1</button>
+    <button class="btnList">2</button>
+    <button class="btnList">3</button>
+
+
+</div>

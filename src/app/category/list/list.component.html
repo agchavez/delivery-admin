@@ -1,0 +1,54 @@
+<div class="container-fluid" id="containerP">
+
+    <h3 id="product">Categorias Existentes</h3>
+</div>
+
+<div id="cont2" class="option">
+    <button type="button" mat-raised-button class="btn-outline-light newUser" (click)="open(content)">
+    <fa-icon [icon]="['fas', 'plus']" style="padding-right: 71px;"></fa-icon>
+    
+    Agregar Categoria</button>
+
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-3 col-sm-12 mb-3" *ngFor="let category of categories">
+            <div class="card">
+                <div>
+                    <h4>{{category.name}}</h4>
+
+                </div>
+                <div class="buttons">
+                    <button class="btnDelete">
+                        <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
+        
+                        </button>
+                    <button class="btnEdit">
+                        <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
+        
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title" style="color: #DB6D0B;">Nueva Categoria!</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <input id="typeahead-basic" [(ngModel)]="nombreCategoria" type="text" placeholder="Nombre" name="nombre" class="form-controlD mt-0" /> <br>
+        <label for="" class="detalles mt-2">Agregue una imagen</label><br>
+        <input type="file" accept=".img,.jpg" class="" name="logo" (change)="readUrlLogo($event)"><br>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark " (click)="save()">Guardar</button>
+    </div>
+</ng-template>

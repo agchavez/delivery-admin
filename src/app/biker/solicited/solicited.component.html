@@ -1,0 +1,53 @@
+<div class="container">
+    <h3 style="padding-top: 25px;">{{biker.firstName}}</h3>
+    <div class="containerInfor">
+        <div class="infor">
+            <h6>
+                Id:
+            </h6>
+            <h6 style="    font-weight: 400;">
+                {{biker.identity}}
+            </h6>
+        </div>
+        <div class="infor" style="width: 18rem;">
+            <h6>
+                Correo:
+            </h6>
+            <h6 style="    font-weight: 400;">
+                {{biker.email}}
+            </h6>
+        </div>
+        <div class="infor">
+            <h6>
+                telefono:
+            </h6>
+            <h6 style="    font-weight: 400;">
+                {{biker.phone}}
+            </h6>
+        </div>
+    </div>
+
+    <div class="doc">
+        <div>
+            <h6 style="font-weight: bold;">Imagen de la licencia</h6>
+            <img [src]="biker.info!.imgLicense" alt="">
+        </div>
+
+        <div>
+            <h6 style="font-weight: bold;">Imagen del vehículo</h6>
+            <img [src]="biker.info!.imgCard" alt="">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button type="button" mat-raised-button class="btn-outline-light accept" (click)="aproved()">
+
+
+            Aceptar</button>
+
+        <button type="button" mat-raised-button class="btn-outline-light cancel">
+
+
+                Rechazar</button>
+    </div>
+</div>

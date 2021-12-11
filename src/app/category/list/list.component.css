@@ -1,0 +1,95 @@
+.table {
+    margin: 2rem 5rem!important;
+    width: 90%;
+}
+
+.vermas {
+    display: flex;
+    width: 20%;
+    padding-left: 50px;
+    justify-content: space-around;
+    padding-top: 5rem;
+}
+
+.btnList {
+    background-color: white;
+    border: 0;
+}
+
+.buttonSpace {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divOption {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+}
+
+.form-controlD {
+    width: 60%;
+    margin-top: 2rem;
+}
+
+.btnDelete {
+    background-color: transparent;
+    color: red;
+    border: 0;
+}
+
+.btnEdit {
+    background-color: transparent;
+    color: black;
+    border: 0
+}
+
+#product {
+    padding-bottom: 17px;
+    color: #DB6D0B;
+}
+
+#containerP {
+    padding-left: 110px;
+    padding-top: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    padding: 17px;
+    border-radius: 20px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row {
+    padding-left: 7rem!important;
+    padding-top: 3rem!important;
+}
+
+.newUser {
+    background-color: transparent;
+    border: 1px solid #DB6D0B;
+    color: #DB6D0B;
+    padding-left: 1rem;
+    padding-right: 4rem;
+    border-radius: 7px;
+    padding-top: 4px;
+    padding-bottom: 0.3rem;
+    width: 20rem;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 210px;
+}
+
+#datos {
+    width: 118px;
+    text-align: center;
+}

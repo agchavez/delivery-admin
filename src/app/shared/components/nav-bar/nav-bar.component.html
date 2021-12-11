@@ -1,1 +1,34 @@
-<p>nav-bar works!</p>
+<nav class=" navbar-expand-lg navbar-light bg-light shadow-sm navbar" style="background-color: white; border-bottom: 0.4px solid #80808030;">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <h4 style="margin-left: 5rem;">PideLow</h4>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left: auto;font-size: larger">
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/auth/login']">Inicio </a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/company/list']">Administrar Empresas </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/biker/list']">Motoristas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/clients/list']">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/category/list']">Categoria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/admin/list']">Administradores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/order/list']">Ordenes</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
