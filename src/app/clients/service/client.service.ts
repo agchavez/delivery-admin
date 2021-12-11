@@ -7,7 +7,7 @@ import { ClientResponse } from '../../shared/interface/client';
   providedIn: 'root'
 })
 export class ClientService {
-  baseUrl = environment.url + 'client/';
+  baseUrl = environment.baseUrl + 'client/';
 
   constructor(
     private http: HttpClient

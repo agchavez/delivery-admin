@@ -7,7 +7,7 @@ import { BykerResponse, Biker } from '../../shared/interface/byker';
   providedIn: 'root'
 })
 export class BikerService {
-  baseUrl = environment.url + 'biker/';
+  baseUrl = environment.baseUrl + 'biker/';
   public biker!:Biker;
   constructor(
     private http: HttpClient
