@@ -2,14 +2,14 @@
     <h3 id="name">{{company.name}}</h3>
     <div id="datos">
 
-        <p id="phone">2774 -2814</p>
+        <p id="phone">{{company.phone}}</p>
     </div>
 
     <h3 id="product">Productos</h3>
 </div>
 
 <div id="cont2" class="option">
-    <button type="button" mat-raised-button class="btn-outline-light newUser" [routerLink]="'/admin/new'">
+    <button type="button" mat-raised-button class="btn-outline-light newUser" routerLink="/products/new/{{idCompany}}">
     <fa-icon [icon]="['fas', 'plus']" style="padding-right: 71px;"></fa-icon>
     
     Nuevo Producto</button>
@@ -48,14 +48,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let product of products;let i=index">
-            <th scope="row">1</th>
+        <tr *ngFor="let i=index;let product of productos;">
+            <th scope="row">{{i+1}}</th>
             <td>{{company.name}}</td>
-            <td>{{product.productos[i].name}}</td>
+            <td>{{product.name}}</td>
             <td class="buttonSpace">
-                <div>Lps. {{product.productos[i].price}}</div>
+                <div>Lps. {{product.price}}</div>
                 <div class="divOption">
-                    <button class="btnDelete">
+                    <button class="btnDelete" (click)="deleteProduct(product.product)">
                 <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
 
                 </button>

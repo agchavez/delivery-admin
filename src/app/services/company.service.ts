@@ -62,4 +62,9 @@ const httpOptions = {
              // console.log(data)
             }
 
+    deleteCompany(idCompany:string):Observable<any>{
+      const url = `${this.baseUrl}/company/delete/${idCompany}`;
+
+      return this.httpClient.delete(url)
+    }
   }
