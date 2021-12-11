@@ -11,7 +11,7 @@ export class ClientComponent implements OnInit {
 
   count:number =1;
   clients:Client[] = [];
-  page:number = 1;
+  page:number = 0;
   constructor(
     private clientService:ClientService
   ) {

@@ -14,6 +14,6 @@ export class ClientService {
   ) { }
 
   getClients(limit:number = 10, offset:number = 0) {
-    return  this.http.get<ClientResponse>(this.baseUrl + `all/?limit=${limit}&offset=${offset}`);
+    return  this.http.get<ClientResponse>(this.baseUrl + `all/?limit=${limit}&offset=${offset}&verified=1`);
   }
 }
