@@ -2,7 +2,7 @@
     <h3 id="name">{{company.name}}</h3>
     <div id="datos">
 
-        <p id="phone">2774 -2814</p>
+        <p id="phone">{{company.phone}}</p>
     </div>
 
     <h3 id="product">Productos</h3>
@@ -55,11 +55,11 @@
             <td class="buttonSpace">
                 <div>Lps. {{product.price}}</div>
                 <div class="divOption">
-                    <button class="btnDelete">
+                    <button class="btnDelete" (click)="deleteProduct(product.product)">
                 <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer"></fa-icon>
 
                 </button>
-                    <button class="btnEdit" (click)="deleteProduct(product.product)">
+                    <button class="btnEdit">
                 <fa-icon [icon]="['far', 'edit']" style="cursor: pointer"></fa-icon>
 
                 </button>
