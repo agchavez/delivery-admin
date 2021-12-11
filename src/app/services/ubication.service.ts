@@ -23,7 +23,7 @@ const httpOptions = {
     }
     
     getUbication():Observable<any>{
-    const url = `${this.baseUrl}/ubication/all`;
+    const url = `${this.baseUrl}ubication/all`;
     return this.httpClient.get(url,{})
      // console.log(data)
     }

@@ -10,11 +10,11 @@ import { Biker } from '../../shared/interface/byker';
 export class ListComponentB implements OnInit {
   bikers:Biker[] =[];
   count:number = 1;
-  page:number = 1;
+  page:number = 0;
   constructor(
     private bikerService: BikerService
   ) {
-    this.bikerService.getBikers(this.page).subscribe(
+    this.bikerService.getBikers(this.page,1).subscribe(
       (bikers) => {
         this.count = bikers.count;
         this.bikers = bikers.bikers;

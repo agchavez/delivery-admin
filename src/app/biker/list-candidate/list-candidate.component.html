@@ -34,15 +34,15 @@
             </tr>
         </thead>
 
-            <tbody>
-              <tr *ngFor="let biker of bikers; let i = index">
-                  <th scope="row">{{i + 1 }}</th>
-                  <td>{{biker.identity}}</td>
-                  <td>{{biker.firstName + " " + biker.lastName | titlecase}}</td>
-                  <td>{{biker.phone}}</td>
+        <tbody>
+            <tr *ngFor="let biker of bikers; let i = index">
+                <th scope="row">{{i + 1 }}</th>
+                <td>{{biker.identity}}</td>
+                <td>{{biker.firstName + " " + biker.lastName | titlecase}}</td>
+                <td>{{biker.phone}}</td>
 
-                  <td class="buttonSpace">
-                    <div>oferrera@gmail.com</div>
+                <td class="buttonSpace">
+                    <div>{{biker.email}}</div>
 
                     <div class="divOption">
                         <button class="mas">
@@ -55,18 +55,18 @@
 
 
 
-              </tr>
-          </tbody>
-      </table>
+            </tr>
+        </tbody>
+    </table>
 
 
-    </div>
+</div>
 
 
-    <div class="vermas">
-      <div>Ver más...</div>
+<div class="vermas">
+    <div>Ver más...</div>
 
-      <button class="btnList" (click)="page = i" *ngFor="let item of [].constructor(count); let i = index">{{i + 1}}</button>
+    <button class="btnList" (click)="page = i" *ngFor="let item of [].constructor(count); let i = index">{{i + 1}}</button>
 
 
-    </div>
+</div>

@@ -24,7 +24,7 @@ const httpOptions = {
     }
     
     getCategories(limit:number,offset:number):Observable<any>{
-        const url = `${this.baseUrl}/category/all/?limit=${limit}&offset=${offset}`;
+        const url = `${this.baseUrl}category/all/?limit=${limit}&offset=${offset}`;
         return this.httpClient.get(url,{})
          // console.log(data)
         }
@@ -34,7 +34,7 @@ const httpOptions = {
       formData.set("name",data.name);
       formData.set("imgFile",data.imgFile);
   
-      const url = `${this.baseUrl}/category/`;
+      const url = `${this.baseUrl}category/`;
       return this.httpClient.post(url,formData)
         // console.log(data)
       }

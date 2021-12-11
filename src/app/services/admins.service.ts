@@ -23,13 +23,13 @@ import { Observable } from 'rxjs/internal/Observable';
     }
     
     getAdmins(limit:number,offset:number):Observable<any>{
-      const url = `${this.baseUrl}/admin/all/?limit=${limit}&offset=${offset}`;
+      const url = `${this.baseUrl}admin/all/?limit=${limit}&offset=${offset}`;
         return this.httpClient.get(url,{})
          // console.log(data)
         }
 
     postAdmin(data:any):Observable<any>{
-      const url = `${this.baseUrl}/admin/register`;
+      const url = `${this.baseUrl}admin/register`;
         return this.httpClient.post(url,data)
           // console.log(data)
         }

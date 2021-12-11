@@ -4,12 +4,13 @@ import { Injectable } from '@angular/core';
 import {of, pipe} from 'rxjs'
 import { map, tap, catchError } from 'rxjs/operators';
 import { Admin } from '../interface/admin';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = 'http://localhost:8080/api/admin/';
+  baseUrl = environment.baseUrl
   private admin!:Admin;
 
   constructor(
@@ -21,7 +22,7 @@ export class AuthService {
   }
 
   login(email:string, pasword:string){
-    return this.http.post(this.baseUrl + 'login', {
+    return this.http.post(this.baseUrl + 'admin/login', {
       email:email,
       password:pasword
     })

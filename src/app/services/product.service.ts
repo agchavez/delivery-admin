@@ -43,7 +43,7 @@ const httpOptions = {
       }
 
       
-      const url = `${this.baseUrl}/product/`;
+      const url = `${this.baseUrl}product/`;
       return this.httpClient.post(url,formData)
         // console.log(data)
       }

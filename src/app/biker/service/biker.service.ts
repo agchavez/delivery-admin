@@ -13,8 +13,8 @@ export class BikerService {
     private http: HttpClient
   ) { }
 
-  getBikers(page:Number,aproved:number = 1, limit:Number = 10) {
-    return this.http.get<BykerResponse>(this.baseUrl + `all/?offset=${page}&limit=${limit}&aproved=${aproved}`);
+  getBikers(page:Number,aproved:number=1, limit:Number = 10) {
+    return this.http.get<BykerResponse>(this.baseUrl + `all/?limit=${limit}&offset=${page}&aproved=${aproved}`);
   }
 
   putAprovedBiker(id:string){

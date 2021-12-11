@@ -25,21 +25,21 @@ const httpOptions = {
     }
 
     getOrders():Observable<any>{
-    const url = `${this.baseUrl}/order/?status=pending`;
+    const url = `${this.baseUrl}order/?status=pending`;
     
     return this.httpClient.get(url,{})
      // console.log(data)
     }
 
     getBikers():Observable<any>{
-        const url = `${this.baseUrl}/biker/all/`;
+        const url = `${this.baseUrl}biker/all/`;
         
         return this.httpClient.get(url,{})
          // console.log(data)
         }
 
     putTakeOrder(idOrder:string,status:string,idBiker:string):Observable<any>{
-      const url = `${this.baseUrl}/order/${idOrder}/admin`
+      const url = `${this.baseUrl}order/${idOrder}/admin`
       const data ={
         uid:idBiker,
         status:status

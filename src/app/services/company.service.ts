@@ -26,7 +26,7 @@ const httpOptions = {
 
      //Subir images del usuario
  uploadImage(imgBanner:File,imgLogo:File,phone:string,name:string,location:any){
-    const url = `${this.baseUrl}/company/`;
+    const url = `${this.baseUrl}company/`;
     //const formData = new FormData();
     //formData.append('imgLogo',imgCard);
     //formData.append('imgLicense',imgLicense);
@@ -45,25 +45,25 @@ const httpOptions = {
   }
     
     getCompanies(limit:number,offset:number):Observable<any>{
-    const url = `${this.baseUrl}/company/all?limit=${limit}&offset=${offset}`;
+    const url = `${this.baseUrl}company/all?limit=${limit}&offset=${offset}`;
     return this.httpClient.get(url,{})
      // console.log(data)
     }
 
     getCompany(idCompany:string):Observable<any>{
-        const url = `${this.baseUrl}/company/${idCompany}`;
+        const url = `${this.baseUrl}company/${idCompany}`;
         return this.httpClient.get(url,{})
          // console.log(data)
         }
 
     getProducts(idCompany:string):Observable<any>{
-            const url = `${this.baseUrl}/product/bycompany/${idCompany}`;
+            const url = `${this.baseUrl}product/bycompany/${idCompany}`;
             return this.httpClient.get(url,{})
              // console.log(data)
             }
 
     deleteCompany(idCompany:string):Observable<any>{
-      const url = `${this.baseUrl}/company/delete/${idCompany}`;
+      const url = `${this.baseUrl}company/delete/${idCompany}`;
 
       return this.httpClient.delete(url)
     }

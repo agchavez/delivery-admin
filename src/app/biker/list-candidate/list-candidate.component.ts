@@ -12,7 +12,7 @@ export class ListCandidateComponent implements OnInit {
 
   bikers:Biker[] =[];
   count:number = 1;
-  page:number = 1;
+  page:number = 0;
   constructor(
     private bikerService:BikerService,
     private router:Router
