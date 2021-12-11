@@ -15,18 +15,18 @@
             <p class="mt-text">Administrador</p>
 
             <div class="form-content">
-                <form action="" autocomplete="off" (ngSubmit)="login()">
+                <form action="" [formGroup]="myForm" autocomplete="off">
                     <div class="p-3">
-                        <input type="email" class="form-control" formControlName="email" placeholder="Escribe tu correo">
+                        <input type="email" formControlName="email" class="form-control" formControlName="email" placeholder="Escribe tu correo">
                         <div class="w-100 text-start p-1">
 
-                            <span class="form-text text-danger" *ngIf="false">
+                            <span class="form-text text-danger" *ngIf="validateCamp('email')">
                             El correo es requerido
                       </span>
                         </div>
                     </div>
                     <div class="input-group p-3 m-1s">
-                        <input type="password" [ngClass]="{'invalid-form': false}" class="form-control" formControlName="password" placeholder="Escribe tu contraseña">
+                        <input type="password" formControlName="password" [ngClass]="{'invalid-form': false}" class="form-control" formControlName="password" placeholder="Escribe tu contraseña">
                         <div class="input-group-append" (click)="showPass()">
                             <span class="input-group-text">
                       <fa-icon *ngIf="!show" [icon] ="['far', 'eye-slash']"></fa-icon>
@@ -34,7 +34,7 @@
                     </span>
                         </div>
                         <div class="w-100 text-start p-1">
-                            <span *ngIf="false" class="form-text text-danger">
+                            <span *ngIf="validateCamp('password')" class="form-text text-danger">
                         La contraseña es requerida
                   </span>
                         </div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="mt-2">
 
-                        <button type="submit" mat-raised-button class="btn-basic mt-5 entrar" routerLink="/category/list">Entrar</button>
+                        <button type="submit" mat-raised-button class="btn-basic mt-5 entrar" (click)="login()">Entrar</button>
                     </div>
 
                 </form>

@@ -52,3 +52,20 @@
     border-left: 0;
     background-color: #8080800a
 }
+
+.divOption{
+  margin-left: 30px;
+  color:  red;
+}
+
+
+.btnList{
+  border: none;
+  background-color: transparent;
+
+}
+
+.vermas{
+  width: 99%;
+  text-align: end;
+}

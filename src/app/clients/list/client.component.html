@@ -16,5 +16,42 @@
             </div>
         </div>
     </div>
-    <app-dashboard-user></app-dashboard-user>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Celular</th>
+                        <th>Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let client of clients">
+                        <td>{{client.firstName}}</td>
+                        <td>{{client.lastName }}</td>
+                        <td>{{client.email}}</td>
+                        <td>{{client.phone}}</td>
+                        <td>{{client.phone}}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="delete(client)">Excluir</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    <div class="vermas">
+      <div>Ver más...</div>
+
+      <button class="btnList" (click)="page = i" *ngFor="let item of [].constructor(count); let i = index">{{i + 1}}</button>
+
+
+    </div>
+
 </div>

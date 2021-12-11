@@ -6,11 +6,14 @@ import { SharedModule } from '../shared/shared.module'
 import { LoginComponent } from './pages/login/login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+//Importar formulario de angular
+
 
 
 @NgModule({
   declarations: [
-  
+
     MainComponent,
     NavBarComponent,
     LoginComponent,
@@ -19,11 +22,13 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     AuthRoutingModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
+
   ]
 })
 export class AuthModule {
   constructor(){
-    
+
   }
  }

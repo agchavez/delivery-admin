@@ -2,8 +2,8 @@
     <h3 class="name" style="padding: 25px;">Motoristas</h3>
     <div class="option">
         <button type="button" mat-raised-button class="btn-outline-light newUser" [routerLink]="'/biker/list-candidate'">
-         
-            
+
+
             Ver Aspirantes</button>
 
         <div class="">
@@ -19,5 +19,60 @@
             </div>
         </div>
     </div>
-    <app-dashboard-user></app-dashboard-user>
+
+    <table class="table mt-3">
+      <thead class="thead-dark">
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Id
+                  <fa-icon [icon]="['fas', 'angle-down']" style="padding-right: 20px;"></fa-icon>
+
+              </th>
+              <th scope="col">Nombre
+                  <fa-icon [icon]="['fas', 'angle-down']" style="padding-right: 20px;"></fa-icon>
+
+              </th>
+              <th scope="col">Contacto</th>
+              <th scope="col">email</th>
+              <th scope="col">Eliminar</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let biker of bikers; let i = index">
+              <th scope="row">{{i + 1 }}</th>
+              <td>{{biker.identity}}</td>
+              <td>{{biker.firstName + " " + biker.lastName | titlecase}}</td>
+              <td>{{biker.phone}}</td>
+
+              <td class="buttonSpace d-flex">
+                  <div>{{biker.email}}</div>
+
+
+
+
+
+              </td>
+              <td>
+                <div class="divOption">
+                  <fa-icon [icon]="['far', 'trash-alt']" style="cursor: pointer" ></fa-icon>
+                </div>
+              </td>
+
+
+
+          </tr>
+      </tbody>
+  </table>
+
+
+</div>
+
+
+<div class="vermas">
+  <div>Ver más...</div>
+
+  <button class="btnList" (click)="page = i" *ngFor="let item of [].constructor(count); let i = index">{{i + 1}}</button>
+
+
 </div>
